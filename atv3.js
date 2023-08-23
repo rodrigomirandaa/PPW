@@ -1,17 +1,19 @@
-let x = prompt("Digite a palavra que deseja verificar: ");
+let n = prompt("Digite uma palavra: ");
 
-function verificarPalindromo(palavra){
-    
-    var splitString = palavra.split("");
-    var reverseArray = splitString.reverse();
-    var reverseString = reverseArray.join("");
-    
-    if (palavra === reverseString){
-        return "É um palindromo";
-    } else {
-        return "Não é um palindromo";
-    }
+function isPalindrome(word) {
+  // Remove espaços em branco da palavra e converte para letras minúsculas
+  var cleanedWord = word.replace(/\s/g, '').toLowerCase();
+
+  var splitString = cleanedWord.split("");
+  var reverseArray = splitString.reverse();
+  var reversedWord = reverseArray.join("");
+
+  if (cleanedWord === reversedWord) {
+    return "É um palíndromo.";
+  } else {
+    return "Não é um palíndromo.";
+  }
 }
 
-console.log("A palavra que você digitou: " + x);
-console.log(verificarPalindromo(x));
+console.log("A palavra que você digitou: " + n);
+console.log(isPalindrome(n));
