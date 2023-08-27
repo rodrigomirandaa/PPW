@@ -31,7 +31,7 @@ function sortear(){
     var pessoaGanhadora = pessoas[numeroSorteado];
 
     if(produtos.length === 0){
-        alert(pessoaGanhadora + "ganhou nada pois não tem produto cadastrado.");
+        alert("Você não cadastrou nenhum produto.");
     } else{
         var idProdutoSorteado = Math.floor(Math.random() * produtos.length);
         var produtoSorteado = produtos[idProdutoSorteado];
@@ -42,7 +42,7 @@ function sortear(){
 }
 
 function menu(){
-    var opcao = prompt("Escolha uma opção:\n1. Cadastrar produto\n2. Cadastrar pessoa\n3. Realizar sorteio\n4. Sair\n");
+    var opcao = prompt("Escolha uma opção:\n1. Cadastrar produto\n2. Cadastrar pessoa\n3. Realizar sorteio\n4. Sair\n\n");
 
     switch(opcao){
         case '1':
