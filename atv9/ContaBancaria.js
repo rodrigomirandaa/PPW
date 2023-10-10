@@ -34,3 +34,5 @@ export class ContaBancaria{
         };
     };
 };
+
+//funcao salvar conta num arquivo json
