@@ -11,9 +11,19 @@
     <h2>Inserir Nova Conta</h2>
     <input type="text" id="numero" placeholder="Número da Conta">
     <input type="text" id="agencia" placeholder="Agência">
-    <input type="text" id="tipo" placeholder="Tipo de Conta">
+
+    <select id="tipo">
+        <option value="Conta Corrente">Conta Corrente</option>
+        <option value="Conta Poupança">Conta Poupança</option>
+        <option value="Conta Universitária">Conta Universitária</option>
+    </select>
     <input type="number" id="saldo" placeholder="Saldo">
     <button onclick="inserirConta()">Inserir</button>
+
+    <h2>Contas Cadastradas</h2>
+    <ul id="listacontas"></ul>
+    <button onclick="visualizarContas()">Visualizar Contas</button>
+    
 
     <script src="script.js"></script>
 </body>
