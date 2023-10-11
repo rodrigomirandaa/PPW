@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Contas Bancárias</title>
-    <script src="script.js"></script>
+    <script type="module">
+        import {inserirConta, visualizarContas} from "./script.js"
+        window.inserirConta = inserirConta;
+        window.visualizarContas = visualizarContas;
+    </script>
 </head>
 <body>
     <h1>Gerenciador de Contas Bancárias</h1>
