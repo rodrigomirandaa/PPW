@@ -1,15 +1,17 @@
 import { ContaCorrente } from "./ContaCorrente.js";
 import { ContaPoupanca } from "./ContaPoupanca.js";
-import { ContaUniversitaria } from "./ContaUniversitaria";
+import { ContaUniversitaria } from "./ContaUniversitaria.js";
 
 //array p armazenas as contas
 const contas= [];
 
 function inserirConta(){
+    alert("sd");
+    
     const numero = document.getElementById("numero").value;
     const agencia = document.getElementById("agencia").value;
     const tipo = document.getElementById("tipo").value;
-    const saldo = parseFloat(document.getElementById("agencia").value);
+    const saldo = parseFloat(document.getElementById("saldo").value);
 
 //verificando se todos os campos foram preenchidos
 if(!numero || !agencia || !tipo || isNaN(saldo)){
@@ -23,7 +25,7 @@ let novaConta;
 
 switch(tipo){
     case "Conta Corrente":
-        novaConta = new ContaCorrente(numero,agencia,saldo,"Platinum");
+        novaConta = new ContaCorrente(numero,agencia,saldo,false);
         break;
     case "Conta Poupanca":
         novaConta = new ContaPoupanca(numero,agencia,saldo);
@@ -59,5 +61,3 @@ function visualizarContas(){
 
 }
 
-console.log(novaConta);
-console.log(contas);
