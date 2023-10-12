@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Contas Bancárias</title>
+    <script type="module">
+        import {inserirConta, visualizarContas,deletarContas} from "./script.js"
+        window.inserirConta = inserirConta;
+        window.visualizarContas = visualizarContas;
+        window.deletarContas=deletarContas;
+    </script>
 </head>
 <body>
     <h1>Gerenciador de Contas Bancárias</h1>
@@ -11,16 +17,23 @@
     <h2>Inserir Nova Conta</h2>
     <input type="text" id="numero" placeholder="Número da Conta">
     <input type="text" id="agencia" placeholder="Agência">
-    <input type="text" id="tipo" placeholder="Tipo de Conta">
+
+    <select id="tipo">
+        <option value="Conta Corrente">Conta Corrente</option>
+        <option value="Conta Poupança">Conta Poupança</option>
+        <option value="Conta Universitária">Conta Universitária</option>
+    </select>
     <input type="number" id="saldo" placeholder="Saldo">
     <button onclick="inserirConta()">Inserir</button>
 
-    <h2>Contas</h2>
-    <ul id="listaContas"></ul>
-
+    <h2>Contas Cadastradas</h2>
+    <ul id="listacontas"></ul>
     <button onclick="visualizarContas()">Visualizar Contas</button>
-    <button onclick="deletarConta()">Deletar Conta</button>
 
-    <script src="script.js"></script>
+    <h2>Deletar Contas</h2>
+    <input type="text" id="contaDeleta" placeholder="Número da Conta">
+    <button onclick="deletarContas()">Deletar Contas</button>
+    
+
 </body>
 </html>

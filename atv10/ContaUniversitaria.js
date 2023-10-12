@@ -13,7 +13,4 @@ export class ContaUniversitaria extends ContaBancaria{
             console.log("Valor invalido!")
         };
     };
-
-
-    
-}
+};
