@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Contas Bancárias</title>
     <script type="module">
-        import {inserirConta, visualizarContas} from "./script.js"
+        import {inserirConta, visualizarContas,deletarContas} from "./script.js"
         window.inserirConta = inserirConta;
         window.visualizarContas = visualizarContas;
+        window.deletarContas=deletarContas;
     </script>
 </head>
 <body>
@@ -28,6 +29,10 @@
     <h2>Contas Cadastradas</h2>
     <ul id="listacontas"></ul>
     <button onclick="visualizarContas()">Visualizar Contas</button>
+
+    <h2>Deletar Contas</h2>
+    <input type="text" id="contaDeleta" placeholder="Número da Conta">
+    <button onclick="deletarContas()">Deletar Contas</button>
     
 
 </body>

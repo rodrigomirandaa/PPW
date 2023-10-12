@@ -60,3 +60,20 @@ export function visualizarContas() {
 
 }
 
+export function deletarContas(){
+
+    const numeroConta = document.getElementById("contaDeleta").value;
+    const indice = contas.findIndex(conta => conta.numero === numeroConta);
+
+    if (indice !== -1) {
+        contas.splice(indice, 1); // Remove a conta no índice encontrado
+        alert("Conta deletada com sucesso!");
+        visualizarContas();
+    } else {
+        alert("Conta não encontrada.");
+    }
+
+    document.getElementById("contaDeleta").value="";
+}
+
+
