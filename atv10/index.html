@@ -10,30 +10,105 @@
         window.visualizarContas = visualizarContas;
         window.deletarContas=deletarContas;
     </script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <h1>Gerenciador de Contas Bancárias</h1>
 
-    <h2>Inserir Nova Conta</h2>
-    <input type="text" id="numero" placeholder="Número da Conta">
-    <input type="text" id="agencia" placeholder="Agência">
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="Financially 1.png" alt="Logo" width="70" height="70"> Gerenciador de Contas Bancárias</a>
 
-    <select id="tipo">
-        <option value="Conta Corrente">Conta Corrente</option>
-        <option value="Conta Poupança">Conta Poupança</option>
-        <option value="Conta Universitária">Conta Universitária</option>
-    </select>
-    <input type="number" id="saldo" placeholder="Saldo">
-    <button onclick="inserirConta()">Inserir</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Corrente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Poupança</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Universitária</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <h2>Contas Cadastradas</h2>
-    <ul id="listacontas"></ul>
-    <button onclick="visualizarContas()">Visualizar Contas</button>
+  <!--Grid section-->
+  
+    <div class="container">
+      <div class="row">
+        <!--Col 1-->
+        <div class="col">
+          <br>
+          <h2>Inserir nova conta</h2>
+          <br>
+           <!-- Placeholders-->
+          <div>
+            <input type="number" class="form-control" id="numero" placeholder="Número">
+          </div>
+          <br>
+          <div>
+            <input type="number" class="form-control" id="agencia" placeholder="Agência">
+          </div>
+          <br>
+          <div>
+            <input type="number" class="form-control" id="saldo" placeholder="Saldo">
+          </div>
+          <br>
 
-    <h2>Deletar Contas</h2>
-    <input type="text" id="contaDeleta" placeholder="Número da Conta">
-    <button onclick="deletarContas()">Deletar Contas</button>
-    
+          <!--Dropdown-->
+          <select class="form-select" id="tipo" aria-label="Default select example">
+            <option selected value="Conta Corrente">Conta Corrente</option>
+            <option value="Conta Poupança">Conta Poupança</option>
+            <option value="Conta Universitária">Conta Universitária</option>
+          </select>
+          <br>
+           <!--Button-->
+          <button type="button" class="btn btn-outline-secondary" onclick="inserirConta()">Inserir</button>
+        </div>
+
+        <!--Col 2-->
+        <div class="col">
+          <br>
+          <h2>Contas cadastradas</h2>
+          <ul id="listacontas"></ul>
+          <!--Button-->
+          <button type="button" class="btn btn-outline-secondary" onclick="visualizarContas()">Visualizar Contas</button>
+
+          <br>
+          <br>
+          <h2>Deletar contas</h2>
+          <!-- Placeholder-->
+          <div>
+            <input type="number" class="form-control" id="contaDeleta" placeholder="Número">
+          </div>
+          <br>
+          <!--Button-->
+          <button type="button" class="btn btn-outline-secondary" onclick="deletarContas()">Deletar Contas</button>
+          <br>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <!--Footer-->
+    <footer class="jumbotron mt-9 text-center" style="background-color: #D3D3D3;">
+      <div class="container">
+        <br>
+        <p>Recife, Pernambuco</p>
+        <p>copyright © 2023 Rodrigo Miranda. Todos os direitos reservados</p>
+        <br>
+      </div>
+    </footer>
 
 </body>
 </html>
